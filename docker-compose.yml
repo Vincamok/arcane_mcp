@@ -1,0 +1,14 @@
+services:
+  arcane-mcp:
+    build: .
+    # image: ghcr.io/<you>/arcane-mcp:latest
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      ARCANE_URL: ${ARCANE_URL:-https://dock.vincz.fr}
+      ARCANE_API_KEY: ${ARCANE_API_KEY:?set ARCANE_API_KEY}
+      MCP_AUTH_TOKEN: ${MCP_AUTH_TOKEN:?set MCP_AUTH_TOKEN}   # bearer required by MCP clients
+      ARCANE_READ_ONLY: ${ARCANE_READ_ONLY:-false}
+      ARCANE_TOOLSETS: ${ARCANE_TOOLSETS:-default}
+      ARCANE_ENVIRONMENT_ID: ${ARCANE_ENVIRONMENT_ID:-0}
