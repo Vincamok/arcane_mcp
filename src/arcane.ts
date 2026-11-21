@@ -46,7 +46,7 @@ export class ArcaneClient {
     for (const p of op.params) {
       const key = args[p.name] === undefined && args[`${p.in}_${p.name}`] !== undefined ? `${p.in}_${p.name}` : p.name;
       let v = args[key];
-      if (v === undefined && p.in === "path" && p.name === "id" && this.cfg.defaultEnvironmentId && /\/environments\/\{id\}/.test(op.path)) v = this.cfg.defaultEnvironmentId;
+      if (v === undefined && p.in === "path" && p.name === "id" && this.cfg.defaultEnvironmentId && /^\/(environments|agents)\/\{id\}/.test(op.path)) v = this.cfg.defaultEnvironmentId;
       used.add(key);
       if (v === undefined || v === null) {
         if (p.required) throw new Error(`Missing required parameter '${p.name}'`);

@@ -79,7 +79,7 @@ export function buildInputSchema(spec: any, op: Operation, hasDefaultEnv: boolea
     const key = properties[p.name] ? `${p.in}_${p.name}` : p.name;
     const s = resolveRef(spec, p.schema);
     properties[key] = { ...s, description: [p.description, p.in === "path" ? "(path)" : ""].filter(Boolean).join(" ") || undefined };
-    const isEnv = p.in === "path" && p.name === "id" && /\/environments\/\{id\}/.test(op.path);
+    const isEnv = p.in === "path" && p.name === "id" && /^\/(environments|agents)\/\{id\}/.test(op.path);
     if (p.required && !(isEnv && hasDefaultEnv)) required.push(key);
     if (isEnv && hasDefaultEnv) properties[key].description += " Defaults to the configured environment.";
   }
