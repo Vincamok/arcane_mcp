@@ -59,7 +59,7 @@ Les opérations de streaming / upload / téléchargement binaire ne sont pas exp
 
 ## Licence et avertissement
 
-- Licence : [MIT](LICENSE). Mentions des dépendances tierces : [NOTICE.md](NOTICE.md). Sécurité : [SECURITY.md](SECURITY.md).
+- Licence : [MIT](LICENSE). Mentions des dépendances tierces : [NOTICE.md](NOTICE.md). Sécurité : [SECURITY.md](SECURITY.md). Confidentialité : [PRIVACY.md](PRIVACY.md). Contribuer : [CONTRIBUTING.md](CONTRIBUTING.md) et [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
 - Projet **indépendant et non officiel** : il n'est ni affilié, ni approuvé, ni sponsorisé par le projet Arcane, Docker, Inc. ou Anthropic. Les noms et marques appartiennent à leurs propriétaires respectifs.
 - Le logiciel est fourni « tel quel », **sans aucune garantie**. Il peut démarrer, arrêter, modifier ou supprimer des conteneurs, volumes et projets : vous en assumez seul l'usage et ses conséquences (perte de données, interruption de service…). Sauvegardez avant d'autoriser les opérations d'écriture.
 - N'utilisez ce serveur que sur des instances que vous êtes autorisé à administrer, et respectez les conditions d'utilisation de l'API d'Arcane et des services que vous connectez.
