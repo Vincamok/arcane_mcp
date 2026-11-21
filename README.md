@@ -56,3 +56,10 @@ Ou en stdio via Docker : `docker run -i --rm -e MCP_TRANSPORT=stdio -e ARCANE_UR
 
 Ce serveur pilote votre hôte Docker : utilisez `ARCANE_READ_ONLY=true` pour de la simple supervision, protégez toujours l'endpoint HTTP (`MCP_AUTH_TOKEN` + reverse proxy TLS), et utilisez une clé API dédiée.
 Les opérations de streaming / upload / téléchargement binaire ne sont pas exposées.
+
+## Licence et avertissement
+
+- Licence : [MIT](LICENSE). Mentions des dépendances tierces : [NOTICE.md](NOTICE.md). Sécurité : [SECURITY.md](SECURITY.md).
+- Projet **indépendant et non officiel** : il n'est ni affilié, ni approuvé, ni sponsorisé par le projet Arcane, Docker, Inc. ou Anthropic. Les noms et marques appartiennent à leurs propriétaires respectifs.
+- Le logiciel est fourni « tel quel », **sans aucune garantie**. Il peut démarrer, arrêter, modifier ou supprimer des conteneurs, volumes et projets : vous en assumez seul l'usage et ses conséquences (perte de données, interruption de service…). Sauvegardez avant d'autoriser les opérations d'écriture.
+- N'utilisez ce serveur que sur des instances que vous êtes autorisé à administrer, et respectez les conditions d'utilisation de l'API d'Arcane et des services que vous connectez.
