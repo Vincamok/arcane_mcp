@@ -1,0 +1,43 @@
+name: Bug report
+description: Something does not work as expected
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Do not paste API keys, tokens, private URLs or logs containing them.** Security issues: see SECURITY.md.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: Expected vs actual behavior.
+    validations: { required: true }
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+    validations: { required: true }
+  - type: input
+    id: arcane
+    attributes:
+      label: Arcane version
+      placeholder: "e.g. 3.1.1"
+  - type: input
+    id: version
+    attributes:
+      label: arcane-mcp version / commit
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Run mode
+      options: [CLI (stdio), Docker (HTTP), Other]
+  - type: input
+    id: client
+    attributes:
+      label: MCP client
+      placeholder: "e.g. Claude Desktop, Claude Code"
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs (redacted)
+      render: shell
